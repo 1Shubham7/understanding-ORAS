@@ -10,3 +10,13 @@ Now like every cloud service like Google has container registry called Google Co
 ## Notary v2
 We are only insterested about Notary v2. but this pic is about Notary v1 -> 
 ![notaryv1](https://github.com/1Shubham7/repo-for-notary-and-oras/assets/116020663/c5b69eab-baeb-4cd3-a03a-71b033150dda)
+
+// The CLI is called Notation
+
+
+What happens is when we build a container image , Docker looks out for image in your PC if not found, Docker goes to Docker Hub (container registry) and pulls an image from there. Now what happens here is that you don't know what you pulled down actually, what kind of resounce you are accessing, is it signed by people I trust. What Notary does is that it provides you the signatures - now you can look at those signatures for example
+
+
+
+
+and say ok, I can trust Bob's signature, I have used other resources from Bob, therefore I can trust the container image and I will use it.
