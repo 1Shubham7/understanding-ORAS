@@ -30,4 +30,19 @@ and say ok, I can trust Bob's signature, I have used other resources from Bob, t
 
 Get Notation installed (What I did exactly - I use Windows)
 Step 1. Download the two files from ![This Link](https://notaryproject.dev/docs/installation/cli/?ref=anaisurl.com)
-Step 2. `
+
+Step 2. go to downloads in powershell and `(Get-FileHash .\notation_1.0.0-rc.7_windows_amd64.zip).Hash`
+
+Step 3. you will get a hash key, confirm that it matches with the key in the "notation_1.0.0-rc.7_checksums" file
+
+Step 4. `C:\Users\Shubh\Downloads\notation_1.0.0-rc.7_windows_amd64> .\notation.exe`
+![notation_1 0 0-rc 7_checksums - Notepad 16-07-2023 10_40_15](https://github.com/1Shubham7/repo-for-notary-and-oras/assets/116020663/d5140fdd-0135-4e95-9bf7-aef37dacfa27)
+
+Step 5. for any commands do `C:\Users\Shubh\Downloads\notation_1.0.0-rc.7_windows_amd64> .\notation.exe version`
+![Captures 16-07-2023 10_42_15](https://github.com/1Shubham7/repo-for-notary-and-oras/assets/116020663/92258e85-14e8-489c-96e7-789dd3ff36be)
+
+I was just randomly trying out multiple things and I though why not `choco install notary` and it worked. After this I can `notary version ` and it works. so
+
+Step 6. `choco install notary`
+![Editing repo-for-notary-and-oras_basics md at main · 1Shubham7_repo-for-notary-and-oras - Google Chrome 16-07-2023 10_58_00](https://github.com/1Shubham7/repo-for-notary-and-oras/assets/116020663/96851a53-57c3-4b39-9f6f-914e5708d7ad)
+
