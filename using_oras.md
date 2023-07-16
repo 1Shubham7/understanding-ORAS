@@ -30,4 +30,20 @@ Step 1. First you will have to pull the artifact, you must have do this in previ
 Step 1. Creating a sample file
 `echo "hello world" > hi.txt`
 
-Step 2. 
+Step 2. Attach the file
+`oras attach --artifact-type doc/example localhost:5000/hello-artifact:v1 hi.txt`
+
+![Windows PowerShell (x86) 16-07-2023 18_56_09](https://github.com/1Shubham7/repo-for-notary-and-oras/assets/116020663/e35fb7b0-b49c-41bd-9ca1-320215528cac)
+
+Step 3. to view it:
+`oras discover localhost:5000/hello-artifact:v1`
+
+![Windows PowerShell (x86) 16-07-2023 18_57_56](https://github.com/1Shubham7/repo-for-notary-and-oras/assets/116020663/b0c59ea7-d340-4709-8385-852f3a8a23e4)
+
+### Cleaning the mess
+
+Step 1. To stop and remove the running the registry and the uploaded content.
+
+`docker rm $(docker stop oras-quickstart)`
+
+
