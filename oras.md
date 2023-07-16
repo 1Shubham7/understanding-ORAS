@@ -9,6 +9,7 @@ artifacts are like the "building blocks" of your software. They are the outputs 
 Registries are already explained
 
 ### OCI means Open Container Initiative
+To know more : https://opencontainers.org/
 
 The first line of ORAS Docs says _Registries are evolving as generic artifact stores._ What does that mean?
 -> that means  registries are transforming into versatile storage places for various types of digital items. They are not limited to just container images or specific formats anymore. Instead, they are becoming more flexible and can store different types of artifacts, which are the digital "things" produced during software development.In the past, registries were primarily used to store container images.However, as software development practices have evolved, so have the needs for storing different types of files beyond just container images. These other files are called "artifacts," and they can be anything that's important for the software development process. For example:
