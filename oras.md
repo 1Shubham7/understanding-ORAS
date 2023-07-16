@@ -33,4 +33,22 @@ This evolution is beneficial because it allows developers and teams to keep all 
 //  OCI Image Manifests have a required field known as `config.mediaType` . According to the guidelines provided by OCI Artifacts, this field provides the ability to differentiate between various types of artifacts.
 
 - ORAS works similarly to tools you may already be familiar with, such as docker. It allows you to push (upload) and pull (download) things to and from an OCI Registry, and also handles login (authentication) and token flow (authorization). What ORAS does differently is shift the focus from container images to other types of artifacts.
-  
+
+
+
+ORAS Docs -> We will be using zot registry in this guide. Zot ![registry](https://zotregistry.io/v1.4.3/) is an OCI-native container registry for distributing container images and OCI artifacts.
+
+### Installation (Windows)
+
+Step 1.`winget install oras` that's it. For Mac or Linux check this out -> https://oras.land/docs/installation/
+now just do `oras version` to check if it is installed or not.
+![Windows PowerShell (x86) 16-07-2023 17_20_59](https://github.com/1Shubham7/repo-for-notary-and-oras/assets/116020663/da71bb3a-b665-4f5d-908c-481ffc43e9ff)
+
+## Quickstart
+
+Now we will have to install zot : for Linux user check out https://zotregistry.io/install-guides/install-guide-linux/ . but I couldn't find any way in this link to install for windows.
+
+Prerequisite is Docker, have Docker installed in your PC, then -
+`docker run -d -p 5000:5000 --name oras-quickstart ghcr.io/project-zot/zot-linux-amd64:latest`
+
+
