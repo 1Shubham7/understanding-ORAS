@@ -28,3 +28,9 @@ The first line of ORAS Docs says _Registries are evolving as generic artifact st
 
 Modern registries are adapting to this change by supporting storage for a wide range of artifacts. They are becoming more like flexible digital warehouses that can hold different types of files related to software development and deployment.
 This evolution is beneficial because it allows developers and teams to keep all their essential files and resources in one central location. It simplifies collaboration, ensures consistent access to various artifacts, and helps maintain a clear record of the software development process.
+
+
+//  OCI Image Manifests have a required field known as `config.mediaType` . According to the guidelines provided by OCI Artifacts, this field provides the ability to differentiate between various types of artifacts.
+
+- ORAS works similarly to tools you may already be familiar with, such as docker. It allows you to push (upload) and pull (download) things to and from an OCI Registry, and also handles login (authentication) and token flow (authorization). What ORAS does differently is shift the focus from container images to other types of artifacts.
+  
