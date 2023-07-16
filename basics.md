@@ -26,6 +26,8 @@ and say ok, I can trust Bob's signature, I have used other resources from Bob, t
 
 -> Notary is one of the projects that enable users to verify the origin of container images before resources are accessed from container registries.
 
-Get Notation installed
-Step 1. `notation`
+![Download Notary](https://notaryproject.dev/docs/installation/cli/?ref=anaisurl.com)
+
+Get Notation installed (What I did exactly - I use Windows)
+Step 1. Download the two files from ![This Link](https://notaryproject.dev/docs/installation/cli/?ref=anaisurl.com)
 Step 2. `
