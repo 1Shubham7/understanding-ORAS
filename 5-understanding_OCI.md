@@ -26,12 +26,15 @@ For example:
 rkt run example.com/org/app,version=v1.0.0`
 
 OCI's Image Format contains all the necessary information to launch the application inside the container. This includes the command to run, environment variables, and other details.  This specification defines how to create an OCI Image, and output an **image manifest**, a **filesystem (layer) serialization**, and an **image configuration**. 
+
+>> **The combination of the image manifest, image configuration, and one or more filesystem serializations is called the OCI Image.**
+
 Now what are these three terms:
 - Image manifest
 - filesystem serialization
 - image configuration
 
-# Image Manifest
+# 1. Image Manifest
 
 so there are two terms - image index and image manifest :
 image index contains information about a set of images that can span a variety of architectures and operating systems.
@@ -91,8 +94,16 @@ Here's an example image manifest :
 
 Couldn't understand anything else. To learn more -> https://github.com/opencontainers/image-spec/blob/main/manifest.md
 
-## Image Layer Filesystem Changeset
+# 2. Image Layer Filesystem Changeset
 
-This document describes how to serialize a filesystem and filesystem changes like removed files into a blob called a layer. One or more layers are applied on top of each other to create a complete filesystem. This document will use a concrete example to illustrate how to create and consume these filesystem layers.
+go to https://github.com/opencontainers/image-spec/blob/main/layer.md ot understand it. TO Tough!!
 
+# 3. image configuration
 
+The image configuration includes information such as application arguments, environments, etc. 
+
+again go to https://github.com/opencontainers/image-spec/blob/main/config.md. It's a waste of time.
+
+> At a high level the image manifest contains metadata about the contents and dependencies of the image including the content-addressable identity of one or more filesystem serialization archives that will be unpacked to make up the final runnable filesystem.
+
+Basically, image manifest contains info about the contents and dependencies of image. That's it.
