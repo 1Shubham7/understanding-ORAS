@@ -46,4 +46,6 @@ Step 1. To stop and remove the running the registry and the uploaded content.
 
 `docker rm $(docker stop oras-quickstart)`
 
+![oras5](https://github.com/1Shubham7/repo-for-notary-and-oras/assets/116020663/7b3bfab0-2462-479a-9278-a43310e97457)
+
 
