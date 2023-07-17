@@ -45,9 +45,10 @@ There are three main goals of the Image Manifest Specification.
 - The second goal is to allow multi-architecture images, through a "fat manifest" which references image manifests for platform-specific versions of an image. In OCI, this is codified in an image index.
 - The third goal is to be translatable to the OCI Runtime Specification.
 
->> Image manifest Property Description
+**Image manifest Property Description :**
+
 Now there are many image manifest Property Description 
-like `schemaVersion` (int) , `mediaType` (string), `artifactType` (string) etc etc. To learn more about them -> https://github.com/opencontainers/image-spec/blob/main/manifest.md
+like `schemaVersion` (int) , `mediaType` (string), `artifactType` (string) etc etc. 
 
 Here's an example image manifest :
 ```
@@ -87,4 +88,11 @@ Here's an example image manifest :
   }
 }
 ```
+
+Couldn't understand anything else. To learn more -> https://github.com/opencontainers/image-spec/blob/main/manifest.md
+
+## Image Layer Filesystem Changeset
+
+This document describes how to serialize a filesystem and filesystem changes like removed files into a blob called a layer. One or more layers are applied on top of each other to create a complete filesystem. This document will use a concrete example to illustrate how to create and consume these filesystem layers.
+
 
