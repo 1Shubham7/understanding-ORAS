@@ -5,3 +5,6 @@ but for authentication we can do this :
 `oras pull -u username -p password myregistry.io/myimage:latest `
 replace username, password, myregistry and my image accordingly.
 
+## Pushing Artifacts
+
+Defining an Artifact uses the `config.mediaType`. 
