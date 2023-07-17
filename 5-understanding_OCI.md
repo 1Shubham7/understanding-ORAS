@@ -25,4 +25,17 @@ For example:
 `docker run example.com/org/app:v1.0.0
 rkt run example.com/org/app,version=v1.0.0`
 
-OCI's Image Format contains all the necessary information to launch the application inside the container. This includes the command to run, environment variables, and other details.  This specification defines how to create an OCI Image, and output an **image manifest**, a **filesystem (layer) serialization**, and an **image configuration**.
+OCI's Image Format contains all the necessary information to launch the application inside the container. This includes the command to run, environment variables, and other details.  This specification defines how to create an OCI Image, and output an **image manifest**, a **filesystem (layer) serialization**, and an **image configuration**. 
+Now what are these three terms:
+- Image manifest
+- filesystem serialization
+- image configuration
+
+# Image Manifest
+
+so there are two terms image index and image manifest :
+image index contains information about a set of images that can span a variety of architectures and operating systems.
+->> an image manifest provides a configuration and set of layers for a single container image for a specific architecture and operating system.
+
+## OCI Image Manifest Specification
+
