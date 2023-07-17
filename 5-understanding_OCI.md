@@ -13,3 +13,16 @@ The OCI currently contains three specifications:
    This specification outlines how container images should be stored and shared. It defines the rules for uploading and downloading container images to and from
    container registries.
 
+### How it works:
+
+First, an OCI implementation (like Docker) downloads a container image.
+Then, the image is unpacked into a "filesystem bundle" by the OCI runtime.
+Finally, the OCI runtime runs the application inside the container.
+
+### Supporting User Experience:
+OCI is designed to work like familiar container engines such as Docker or rkt. Users can run a container image without any extra settings:
+For example:
+`docker run example.com/org/app:v1.0.0
+rkt run example.com/org/app,version=v1.0.0`
+
+OCI's Image Format contains all the necessary information to launch the application inside the container. This includes the command to run, environment variables, and other details.  This specification defines how to create an OCI Image, and output an **image manifest**, a **filesystem (layer) serialization**, and an **image configuration**.
