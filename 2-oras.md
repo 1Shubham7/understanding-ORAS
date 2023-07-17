@@ -3,6 +3,9 @@ ORAS provides a way to push and pull OCI Artifacts to and from OCI Registries.
 
 Now what are artifacts and registries and what is OCI. 
 
+![oras4](https://github.com/1Shubham7/repo-for-notary-and-oras/assets/116020663/f4f23c87-7fed-425a-a1dd-ec58d4da3f4d)
+
+
 ### Artifacts
 artifacts are like the "building blocks" of your software. They are the outputs generated as a result of the different steps involved in creating, testing, and deploying your application. Imagine building a house - the artifacts are like the bricks, cement, and other materials that you use to construct it.
 
