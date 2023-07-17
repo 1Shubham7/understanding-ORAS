@@ -50,7 +50,8 @@ Now there are many image manifest Property Description
 like `schemaVersion` (int) , `mediaType` (string), `artifactType` (string) etc etc. To learn more about them -> https://github.com/opencontainers/image-spec/blob/main/manifest.md
 
 Here's an example image manifest :
-`{
+```
+{
   "schemaVersion": 2,
   "mediaType": "application/vnd.oci.image.manifest.v1+json",
   "config": {
@@ -84,5 +85,6 @@ Here's an example image manifest :
     "com.example.key1": "value1",
     "com.example.key2": "value2"
   }
-}`
+}
+```
 
