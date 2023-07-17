@@ -9,6 +9,8 @@ Now like every cloud service like Google has container registry called Google Co
 
 ![suppy](https://github.com/1Shubham7/repo-for-notary-and-oras/assets/116020663/a9098365-c381-4a71-9818-b026da4ae5b7)
 
+#### SBOM File
+SBOM stands for Software Bill of Materials. It is a file or document that provides a detailed inventory of all the components and dependencies used in a particular software application or system. Just like a bill of materials in manufacturing lists all the parts and materials needed to build a product, an SBOM lists all the components that make up a software application.
 
 ## Notary v2
 We are only insterested about Notary v2. but this pic is about Notary v1 -> 
