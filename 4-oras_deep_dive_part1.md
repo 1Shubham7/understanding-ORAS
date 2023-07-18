@@ -81,8 +81,12 @@ Step 3. Push multiple files with different `mediaTypes`:
 ```
 oras push localhost:5000/hello-artifact:v2 --config config.json:application/vnd.acme.rocket.config.v1+json artifact.txt:text/plain ./docs/:application/vnd.acme.rocket.docs.layer.v1+tar
 ```
-The Docs says that the push would generate this manifest, it didn't generate anything at my case -
+The Docs says that the push would generate this manifest, 
+To have a look at what manifest was generated - `oras manifest fetch localhost:5000/hello-artifact:v2 --pretty`
+Mine is here -
+![MINGW64__c_Users_Shubh 18-07-2023 16_43_48](https://github.com/1Shubham7/understanding-ORAS/assets/116020663/a92d11f4-7230-4aac-b7c0-ccf0c40df2b6)
 
+your's should be like this ->
 ```
 {
   "schemaVersion": 2,
