@@ -62,42 +62,9 @@ Step 2. push it
 
 ![Manifest Config _ OCI Registry As Storage - Google Chrome 18-07-2023 16_29_44](https://github.com/1Shubham7/understanding-ORAS/assets/116020663/319deb40-0a7d-4b6b-9b14-6506cb5ca0b0)
 
-the docs says it results in : 
+ti check the manifest file - `oras manifest fetch localhost:5000/club:party --pretty`
 
-```
-{
-  "schemaVersion": 2,
-  "config": {
-    "mediaType": "application/vnd.oci.image.config.v1+json",
-    "digest": "sha256:44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
-    "size": 2,
-    "annotations": {
-      "hello": "world"
-    }
-  },
-  "layers": [
-    {
-      "mediaType": "application/vnd.oci.image.layer.v1.tar",
-      "digest": "sha256:22af0898315a239117308d39acd80636326c4987510b0ec6848e58eb584ba82e",
-      "size": 6,
-      "annotations": {
-        "fun": "more cream",
-        "org.opencontainers.image.title": "cake.txt"
-      }
-    },
-    {
-      "mediaType": "application/vnd.oci.image.layer.v1.tar",
-      "digest": "sha256:be6fe11876282442bead98e8b24aca07f8972a763cd366c56b4b5f7bcdd23eac",
-      "size": 7,
-      "annotations": {
-        "org.opencontainers.image.title": "juice.txt"
-      }
-    }
-  ],
-  "annotations": {
-    "foo": "bar"
-  }
-}
-```
+It results in -
+![Billy Zha - Cloud Native Computing Foundation - Slack 18-07-2023 16_48_41](https://github.com/1Shubham7/understanding-ORAS/assets/116020663/a973ea6a-c438-4cab-a710-629e6e128064)
 
-as of now I don't know how to check, please contact ORAS maintainers.
+## these are complete docs till go scripting, will be covering them in future.
