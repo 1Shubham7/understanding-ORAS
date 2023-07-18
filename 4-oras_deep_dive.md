@@ -119,3 +119,9 @@ Now for pulling, the same thing `oras pull localhost:5000/hello-artifact:v2`
 ## Using cache when pulling artifacts
 
 In order to save unnecessary network bandwidth and disk I/O, oras provides a solution to pull the artifacts into a local content-address storage (CAS) if the content does not exist, and then copy the artifact to the desired storage. The cache directory is specified by using the environment variable `ORAS_CACHE`.
+
+Step 1. Set cache root
+`export ORAS_CACHE=~/.oras/cache`
+
+Step 2. Pull artifacts as usual
+`oras pull localhost:5000/hello:latest`   -> This step gives me an error.
