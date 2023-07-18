@@ -96,7 +96,7 @@ Couldn't understand anything else. To learn more -> https://github.com/openconta
 
 # 2. Image Layer Filesystem Changeset
 
-go to https://github.com/opencontainers/image-spec/blob/main/layer.md ot understand it. TO Tough!!
+go to https://github.com/opencontainers/image-spec/blob/main/layer.md to understand it. TO Tough!!
 
 # 3. image configuration
 
