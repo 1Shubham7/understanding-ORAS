@@ -58,4 +58,64 @@ Step 2. Push an artifact, with the `config.json` file
 
 you can the the similarities in the steps. These are just optional ways to push artifacts.
 
+## 3. Pushing artifacts with multiple files
 
+here we'll push a collection of files.
+- A single file (artifact.txt)
+- A collection of files (docs/*)
+
+Step 1. Run these three steps to create additional blobs
+```
+mkdir docs
+echo "Docs on this artifact" > ./docs/readme.md
+echo "More content for this artifact" > ./docs/readme2.md
+```
+
+Step 2. Create a config file, referencing the entry doc file
+```
+echo "{\"doc\":\"readme.md\"}" > config.json
+```
+
+Step 3. Push multiple files with different `mediaTypes`:
+
+```
+oras push localhost:5000/hello-artifact:v2 --config config.json:application/vnd.acme.rocket.config.v1+json artifact.txt:text/plain ./docs/:application/vnd.acme.rocket.docs.layer.v1+tar
+```
+The Docs says that the push would generate this manifest, it didn't generate anything at my case -
+
+```
+{
+  "schemaVersion": 2,
+  "config": {
+    "mediaType": "application/vnd.acme.rocket.config.v1+json",
+    "digest": "sha256:7aa5d0dee9a3a73c81db4356cf7aa5666e175d96e68ee763eeb977bd7ba59ee5",
+    "size": 20
+  },
+  "layers": [
+    {
+      "mediaType": "text/plain",
+      "digest": "sha256:a948904f2f0f479b8f8197694b30184b0d2ed1c1cd2a1ec0fb85d299a192a447",
+      "size": 12,
+      "annotations": {
+        "org.opencontainers.image.title": "artifact.txt"
+      }
+    },
+    {
+      "mediaType": "application/vnd.acme.rocket.docs.layer.v1+tar",
+      "digest": "sha256:20ae7d51e2365405e6942439140d897548e1d4610db60354aef8a5ce1f1699a7",
+      "size": 196,
+      "annotations": {
+        "io.deis.oras.content.digest": "sha256:4329ea6c620ca4e9cedc5f5e8040432114cb5d64fc53107ea870db149e3d2b9e",
+        "io.deis.oras.content.unpack": "true",
+        "org.opencontainers.image.title": "docs"
+      }
+    }
+  ]
+}
+```
+
+Now for pulling, the same thing `oras pull localhost:5000/hello-artifact:v2`
+
+## Using cache when pulling artifacts
+
+In order to save unnecessary network bandwidth and disk I/O, oras provides a solution to pull the artifacts into a local content-address storage (CAS) if the content does not exist, and then copy the artifact to the desired storage. The cache directory is specified by using the environment variable `ORAS_CACHE`.
