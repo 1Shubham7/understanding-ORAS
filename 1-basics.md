@@ -12,6 +12,9 @@ Now like every cloud service like Google has container registry called Google Co
 #### SBOM File
 SBOM stands for Software Bill of Materials. It is a file or document that provides a detailed inventory of all the components and dependencies used in a particular software application or system. Just like a bill of materials in manufacturing lists all the parts and materials needed to build a product, an SBOM lists all the components that make up a software application.
 
+#### Blobs
+"Blobs" typically refers to Binary Large Objects. Blobs are a type of data storage used to store large binary data, such as files or multimedia content. They are commonly used to manage and store artifacts, dependencies, and other large files.
+
 ## Notary v2
 We are only insterested about Notary v2. but this pic is about Notary v1 -> 
 ![notaryv1](https://github.com/1Shubham7/repo-for-notary-and-oras/assets/116020663/c5b69eab-baeb-4cd3-a03a-71b033150dda)
