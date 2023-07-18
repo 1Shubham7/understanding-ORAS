@@ -36,3 +36,26 @@ Step 3.2 pull the artifact you pushed (it was called hello-artifact)
 
 Step 3.3 printing what was on the file, it should print "hello world"
 ```cat artifact.txt ```
+
+![Screenshot 18-07-2023 10_35_50](https://github.com/1Shubham7/understanding-ORAS/assets/116020663/d947bf83-7d1c-4b6d-a6fd-8098932c5a8e)
+
+Step 4. Push the sample file, with a layer `mediaType`, using the format `filename[:type]`
+```oras push localhost:5000/hello-artifact:v2 --artifact-type application/vnd.acme.rocket.config artifact.txt:text/plain```
+
+![MINGW64__c_Users_Shubh 18-07-2023 10_37_56](https://github.com/1Shubham7/understanding-ORAS/assets/116020663/5eeda96f-1ce5-4b0c-947c-a7a8bf4890ea)
+
+## 2. Pushing artifacts with config files
+
+config files can be used by the artifact to determine how or where to process and/or route the blobs.
+
+Step 1. Create a config file
+```echo "{\"name\":\"foo\",\"value\":\"bar\"}" > config.json```
+
+Step 2. Push an artifact, with the `config.json` file
+```oras push localhost:5000/hello-artifact:v2 --config config.json:application/vnd.acme.rocket.config.v1+json artifact.txt:text/plain```
+
+![oras5](https://github.com/1Shubham7/understanding-ORAS/assets/116020663/ce9c7948-b4ee-4a45-9bb2-9c6671c5dd87)
+
+you can the the similarities in the steps. These are just optional ways to push artifacts.
+
+
