@@ -54,3 +54,6 @@ I was just randomly trying out multiple things and I though why not `choco insta
 Step 6. `choco install notary`
 ![Editing repo-for-notary-and-oras_basics md at main · 1Shubham7_repo-for-notary-and-oras - Google Chrome 16-07-2023 10_58_00](https://github.com/1Shubham7/repo-for-notary-and-oras/assets/116020663/96851a53-57c3-4b39-9f6f-914e5708d7ad)
 
+
+// you might need to know about a container registry like Zot, for that check this out -> youtube.com/watch?v=zOjOF00aQSY&list=WL&ab_channel=Kubesimplify
+
